@@ -24,12 +24,20 @@ export default {
   },
   data: function() {
     return {
-      text: "こんにちは",
-      tweets: [
-        { id: 1, text: "こんにちは" },
-        { id: 2, text: "おはよう" }
-      ]
+      tweets: []
     };
+  },
+  created: function() {
+    db.collection("tweets")
+      .get()
+      .then(snapshot => {
+        snapshot.docs.forEach(doc => {
+          this.tweets.push({
+            id: doc.id,
+            ...doc.data()
+          });
+        });
+      });
   }
 };
 </script>
