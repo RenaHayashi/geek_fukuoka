@@ -1,5 +1,5 @@
 <template>
   <div>
-    taigadayo;
+    トップページ
   </div>
 </template>
