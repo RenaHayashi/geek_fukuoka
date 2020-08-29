@@ -1,6 +1,5 @@
 <template>
   <div>
-    トップページ
-    kosukedayo
+    トップページ kosukedayo
   </div>
 </template>
