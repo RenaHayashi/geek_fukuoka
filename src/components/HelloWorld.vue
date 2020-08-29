@@ -1,7 +1,5 @@
 <template>
   <div>
-    トップページ
-    kosukedayo
-    taigafukkatu;
+    トップページ kosukedayo taigafukkatu;
   </div>
 </template>
