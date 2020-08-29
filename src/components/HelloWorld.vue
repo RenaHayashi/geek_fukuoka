@@ -2,5 +2,6 @@
   <div>
     トップページ
     kosukedayo
+    taigafukkatu;
   </div>
 </template>
