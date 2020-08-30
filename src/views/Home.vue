@@ -1,11 +1,11 @@
 <template>
   <div class="home">
-    <button v-on:click="postTweet">
-      クリック
-    </button>
-
-    <div v-for="(tweet, index) in tweets" v-bind:key="index">
-      {{ tweet.text }}
+    <div v-for="(product, index) in products" v-bind:key="index">
+      <div>
+        <p>{{ product.name }}</p>
+        <p>{{ product.url }}</p>
+        <p>{{ product.description }}</p>
+      </div>
     </div>
   </div>
 </template>
@@ -14,25 +14,17 @@
 import db from "@/firebase";
 
 export default {
-  name: "home",
-  methods: {
-    postTweet: function() {
-      db.collection("tweets").add({
-        text: "こんにちは、ツイートの本文です。"
-      });
-    }
-  },
   data: function() {
     return {
-      tweets: []
+      products: []
     };
   },
   created: function() {
-    db.collection("tweets")
+    db.collection("products")
       .get()
       .then(snapshot => {
         snapshot.docs.forEach(doc => {
-          this.tweets.push({
+          this.products.push({
             id: doc.id,
             ...doc.data()
           });
