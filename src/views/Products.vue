@@ -24,7 +24,7 @@ export default {
       .get()
       .then(snapshot => {
         snapshot.docs.forEach(doc => {
-          this.products.course.web.push({
+          this.$route.params.couse.push({
             id: doc.id,
             ...doc.data()
           });
