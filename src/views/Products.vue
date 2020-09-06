@@ -1,6 +1,6 @@
 <template>
   <div class="products">
-    コースごとプロダクト
+    <p>{{ $route.params.course }}コースプロダクト一覧</p>
     <div v-for="(product, index) in products" v-bind:key="index">
       <div>
         <p>{{ product.name }}</p>
@@ -21,15 +21,16 @@ export default {
   },
   created: function() {
     db.collection("products")
+      .where("course", "==", this.$route.params.course) // ① これが web のとき
       .get()
       .then(snapshot => {
         snapshot.docs.forEach(doc => {
-          this.$route.params.couse.push({
+          this.products.push({
             id: doc.id,
             ...doc.data()
           });
         });
-      });
+      }); // ② course が web であるドキュメントだけ取得できる。
   }
 };
 </script>
