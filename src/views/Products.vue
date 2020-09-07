@@ -24,13 +24,12 @@ export default {
       .where("course", "==", this.$route.params.course) // ① これが web のとき
       .get()
       .then(snapshot => {
-        snapshot.docs.forEach(doc => {
-          this.products.push({
-            id: doc.id,
-            ...doc.data()
-          });
+        snapshot.forEach(doc => {
+          this.products.push(doc.data());
+          console.log(this.$route.products);
         });
-      }); // ② course が web であるドキュメントだけ取得できる。
+      });
+    console.log(this.$route.products);
   }
 };
 </script>
