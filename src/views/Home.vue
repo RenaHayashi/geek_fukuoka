@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    <Slide />
     <div class="card" v-for="(product, index) in products" v-bind:key="index">
       <ul class="product_card">
         <li>{{ product.name }}</li>
@@ -12,8 +13,12 @@
 
 <script>
 import db from "@/firebase";
+import Slide from "@/components/Slide.vue";
 
 export default {
+  components: {
+    Slide
+  },
   data: function() {
     return {
       products: []
