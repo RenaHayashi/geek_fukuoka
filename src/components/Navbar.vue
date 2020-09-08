@@ -3,14 +3,16 @@
     <div class="cp_cont">
       <div class="cp_offcm01">
         <input type="checkbox" id="cp_toggle01" />
-        <label for="cp_toggle01"><span></span></label>
+        <label for="cp_toggle01"></label>
         <div class="cp_menu">
           <ul>
             <li>
               <router-link to="/">Home</router-link>
-              <!-- </li>
-            <router-link to="/about">About</router-link>
-            <li> -->
+            </li>
+            <!-- <li>
+              <router-link to="/about">About</router-link>
+            </li> -->
+            <li>
               <router-link to="/products/Web">Web Products</router-link>
             </li>
             <li>
@@ -89,6 +91,7 @@ a {
   -webkit-transform: translateX(-100vw);
   transform: translateX(-100vw);
 }
+
 /* menu toggle */
 .cp_offcm01 #cp_toggle01 ~ label {
   display: block;
@@ -106,13 +109,15 @@ a {
   transform: translateX(-250px);
 }
 .cp_offcm01 #cp_toggle01 ~ label::before {
-  font-family: "FontAwesome";
-  content: "\f0c9";
-  font-size: 2em;
+  content: ""; /*何も入れない*/
+  display: inline-block; /*忘れずに！*/
+  width: 30px; /*画像の幅*/
+  height: 30px; /*画像の高さ*/
+  background-image: url(../assets/menu.png);
+  background-size: contain;
+  vertical-align: middle;
 }
-.cp_offcm01 #cp_toggle01:checked ~ label::before {
-  content: "\f00d";
-}
+
 /* contents */
 .cp_contents {
   color: #333333;
