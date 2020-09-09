@@ -13,9 +13,10 @@ export default {};
   height: 100px;
   width: 100%;
   font-family: "Oswald", sans-serif;
-  font-size: 1.4em;
-  color: rgb(48, 33, 0);
-  padding-left: 30px;
+  font-size: 1em;
+  color: black;
+  padding-left: 80px;
+  padding-right: 80px;
   display: flex;
   align-items: center;
 }

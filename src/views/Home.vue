@@ -1,12 +1,15 @@
 <template>
-  <div class="home">
+  <div>
     <Slide />
-    <div class="card" v-for="(product, index) in products" v-bind:key="index">
-      <ul class="product_card">
-        <li>{{ product.name }}</li>
-        <li>{{ product.url }}</li>
-        <li>{{ product.description }}</li>
-      </ul>
+    <Tickets />
+    <div class="body">
+      <div class="card" v-for="(product, index) in products" v-bind:key="index">
+        <ul class="product_card">
+          <li>{{ product.name }}</li>
+          <li>{{ product.url }}</li>
+          <li>{{ product.description }}</li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
@@ -14,10 +17,12 @@
 <script>
 import db from "@/firebase";
 import Slide from "@/components/Slide.vue";
+import Tickets from "@/components/Tickets.vue";
 
 export default {
   components: {
-    Slide
+    Slide,
+    Tickets
   },
   data: function() {
     return {
@@ -39,6 +44,9 @@ export default {
 };
 </script>
 <style>
+.body {
+  margin: 0px, 200px;
+}
 .product_card {
   color: #1e366a;
   border: dotted #1e366a 1px; /*ドット 色 太さ*/

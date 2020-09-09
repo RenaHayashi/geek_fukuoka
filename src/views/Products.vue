@@ -1,5 +1,5 @@
 <template>
-  <div class="products">
+  <div class="body">
     <p>{{ $route.params.course }}コースプロダクト一覧</p>
     <div v-for="(product, index) in products" v-bind:key="index">
       <div>
