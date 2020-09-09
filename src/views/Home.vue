@@ -3,6 +3,7 @@
     <Slide />
     <Tickets />
     <div class="body">
+      <div class="title">プロダクト一覧</div>
       <div class="card" v-for="(product, index) in products" v-bind:key="index">
         <ul class="product_card">
           <li>{{ product.name }}</li>
@@ -44,8 +45,17 @@ export default {
 };
 </script>
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap");
+
 .body {
   margin: 0px, 200px;
+}
+
+.title {
+  font-family: "Sawarabi Gothic", sans-serif;
+  padding-left: 80px;
+  font-size: 2em;
+  font-weight: 500;
 }
 .product_card {
   color: #1e366a;

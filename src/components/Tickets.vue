@@ -12,7 +12,9 @@
           <i class="fab fa-instagram"></i>
           <i class="fab fa-github"></i>
         </div>
-        <button></button>
+        <button>
+          <router-link to="/products/iPhone">i</router-link>
+        </button>
       </div>
       <div class="card card2">
         <h2>Game</h2>
@@ -25,7 +27,9 @@
           <i class="fab fa-instagram"></i>
           <i class="fab fa-github"></i>
         </div>
-        <button></button>
+        <button>
+          <router-link to="/products/Game">G</router-link>
+        </button>
       </div>
       <div class="card card3">
         <h2>Web</h2>
@@ -38,7 +42,7 @@
           <i class="fab fa-instagram"></i>
           <i class="fab fa-github"></i>
         </div>
-        <button></button>
+        <button><router-link to="/products/Web">W</router-link></button>
       </div>
     </div>
   </div>
@@ -159,7 +163,7 @@ body {
       position: absolute;
       top: 20px;
       right: 70px;
-      color: #333;
+      color: white;
       opacity: 0.7;
       font-size: 12px;
       letter-spacing: 1px;
@@ -232,6 +236,7 @@ body {
       outline: none;
       transition: all 0.3s ease;
       mix-blend-mode: hard-light;
+      color: white;
 
       i {
         font-size: 3rem;
