@@ -1,29 +1,25 @@
 <template>
-  <div>
-    <div class="cp_cont">
-      <div class="cp_offcm01">
-        <input type="checkbox" id="cp_toggle01" />
-        <label for="cp_toggle01"></label>
-        <div class="cp_menu">
-          <ul>
-            <li>
-              <router-link to="/">Home</router-link>
-            </li>
-            <!-- <li>
+  <div class="cp_offcm01">
+    <input type="checkbox" id="cp_toggle01" />
+    <label for="cp_toggle01"></label>
+    <div class="cp_menu">
+      <ul>
+        <li>
+          <router-link to="/">Home</router-link>
+        </li>
+        <!-- <li>
               <router-link to="/about">About</router-link>
             </li> -->
-            <li>
-              <router-link to="/products/Web">Web Products</router-link>
-            </li>
-            <li>
-              <router-link to="/products/iPhone">iPhone Products</router-link>
-            </li>
-            <li>
-              <router-link to="/products/Game">Game Products</router-link>
-            </li>
-          </ul>
-        </div>
-      </div>
+        <li>
+          <router-link to="/products/iPhone">iPhone Products</router-link>
+        </li>
+        <li>
+          <router-link to="/products/Game">Game Products</router-link>
+        </li>
+        <li>
+          <router-link to="/products/Web">Web Products</router-link>
+        </li>
+      </ul>
     </div>
   </div>
 </template>
@@ -43,9 +39,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
-.cp_cont {
-  height: 65vh;
-}
+
 .cp_offcm01 {
   position: absolute;
   top: 20px;
@@ -58,7 +52,7 @@ a {
   top: 0;
   right: -100vw;
   width: 250px;
-  height: 100%;
+  height: 500px;
   cursor: pointer;
   -webkit-transition: 0.53s transform;
   transition: 0.53s transform;
@@ -79,7 +73,8 @@ a {
   padding: 20px;
   text-decoration: none;
   color: #ffffff;
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 2px solid #ffffff;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .cp_offcm01 #cp_toggle01 {
