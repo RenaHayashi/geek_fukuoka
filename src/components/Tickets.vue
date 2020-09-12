@@ -48,7 +48,7 @@
   </div>
 </template>
 <style lang="scss">
-$bg-color: #e6e5e1;
+$bg-color: #bdbcbb;
 $shdow-gray: #d3d3d5;
 $orange: #da4d1d;
 $blue: #2b26c3;
@@ -89,7 +89,7 @@ body {
 .container {
   width: 100%;
   height: 100%;
-
+  padding-top: 30px;
   .card {
     position: relative;
     width: 450px;
@@ -97,7 +97,7 @@ body {
     background-color: #fff;
     overflow: hidden;
     margin-bottom: 4px;
-    margin-left: 23px;
+    margin-left: 15px;
     margin-right: 0px;
     display: inline-block;
 
