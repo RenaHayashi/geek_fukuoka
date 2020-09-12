@@ -48,11 +48,12 @@ a {
 }
 /* menu */
 .cp_offcm01 .cp_menu {
+  z-index: 100;
   position: fixed;
   top: 0;
   right: -100vw;
   width: 250px;
-  height: 500px;
+  height: 100%;
   cursor: pointer;
   -webkit-transition: 0.53s transform;
   transition: 0.53s transform;
@@ -73,8 +74,8 @@ a {
   padding: 20px;
   text-decoration: none;
   color: #ffffff;
+  font-family: "Oswald", sans-serif;
   border-bottom: 2px solid #ffffff;
-  font-family: "Source Sans Pro", sans-serif;
 }
 
 .cp_offcm01 #cp_toggle01 {

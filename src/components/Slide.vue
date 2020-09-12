@@ -262,7 +262,7 @@ svg {
 
 /* Animate the background shapes */
 #background path {
-  animation: pulse 4s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+  animation: pulse 5s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
 
   /* Necessary to keep the SVG objects in place while scaling */
   transform-origin: 50% 50%;
@@ -271,13 +271,13 @@ svg {
 
 /* Reveal the desired lines of text in the desired order */
 #textClip text:nth-of-type(n + 1):nth-of-type(-n + 3) {
-  animation: showFirst 12s infinite;
+  animation: showFirst 15s infinite;
 }
 #textClip text:nth-of-type(n + 4):nth-of-type(-n + 6) {
-  animation: showSecond 12s infinite;
+  animation: showSecond 15s infinite;
 }
 #textClip text:nth-of-type(n + 7):nth-of-type(-n + 9) {
-  animation: showThird 12s infinite;
+  animation: showThird 15s infinite;
 }
 
 @keyframes pulse {
